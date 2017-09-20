@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>茂藤篝</title>
+	<link rel="stylesheet" href="css/cssReset.css">
+	<link rel="stylesheet" href="css/forum.css">
+	<link rel="stylesheet" href="css/produce-l.css">
+	<script type="text/javascript" src="js/time.js"></script>
+	<script type="text/javascript">
+	//页面加载完成之后让图片动起来
+	window.onload=init;
+	var i = 10;
+	var dsq;
+	function init(){
+		var obj = document.getElementById("li10");
+		obj.style.background="#FE4100";
+		dsq=window.setInterval("tp()",1000);
+	}
+	//让图片自动切换的函数
+	function tp(){
+		i++;
+		if(i>14){
+			i=10;
+		}
+		var obj = document.getElementById("d1");
+		obj.src = "image/"+i+".png";
+		obj.width = "400";
+		obj.height = "250";
+		ys();
+		var yss = document.getElementById("li"+i);
+		yss.style.background="#FE4100";
+	}
+	function st(){
+		window.clearInterval(dsq);
+	}
+	//鼠标离开图片让图片自动切换
+	function start(){
+		dsq=window.setInterval("tp()",1000);
+	}
+	function tingTu(n,m){
+		i=n;
+		var obj = document.getElementById("d1");
+		ys();
+		obj.src = "image/"+n+".png";
+		obj.width = "400";
+		obj.height = "250";
+		window.clearInterval(dsq);
+		m.style.background="#FE4100";
+	}
+	//鼠标离开Li标签自动切换
+	function dongTu(){
+		dsq=window.setInterval("tp()",1000);
+	}
+	//清楚所有标签的背景颜色
+	function ys(){
+		for(var j = 10;j<=14;j++){
+			var Allobj = document.getElementById("li"+j);
+			Allobj.style.background="#B4B2B2";
+
+		}
+	}
+	</script>
+	<script type="text/javascript">
+	function showDiv(n,m){
+		//把所有的div隐藏
+		for(var j = 1;j<=5;j++){
+			var AllDiv=document.getElementById("div"+j);
+			AllDiv.style.display="none";
+			var Div=document.getElementById("li"+j);
+			// m.style.borderBottom = 'none';
+			// Div.style.borderBottom = '#B3B2B2';
+		}
+		//获取div对象
+		var obj = document.getElementById("div"+n);
+		obj.style.display="block";
+		// var Div=document.getElementById("li"+n);
+		
+	}
+	</script>
+</head>
+<body>
+<!-- 页面的顶部 -->
+	<div class="top">
+		<div class="top-page">
+			<div class="top-page-l">您好，欢迎来到茂藤篝!
+			<span class="login"><a href="login.html">登录</a> | <a href="index.html">注册</a>
+			</div>
+			<div class="top-page-r">
+				今天是：
+				<span id="time"></span>
+				<script language="javascript"> showtime();</script>
+			</div>
+		</div>
+	</div>
+
+<!-- logo开始 -->
+	<div class="logo">
+		<a href="index.html" title=""><h1 class="logo-l">茂藤篝</h1></a> <!--网站logo语义化的角度换成a标签增加权重-->
+		<div class="logo-r">
+			<div class="logo-r-content">
+				<input type="input" class="logo-r-searche" value="请输入关键字" onfocus="this.value=''" onblur="if(this.value==''){this.value='请输入关键字'}">
+				<input type="button" value="搜索" class="logo-r-btn">
+			</div>
+		</div>
+		<div class="logo-rr">
+			<span>茂藤篝&nbsp;&nbsp;&nbsp;</span>
+			<span class="logo-rrz">没有最好,只有更好</span>
+		</div>
+	</div>
+<!-- logo结束 -->
+
+<!-- 导航开始 -->
+
+	<div class="nav">
+		<ul>
+			<li><a href="index.html" title="">首页</a></li>
+			<li><a href="project.html"  title="">活动</a></li>
+			<li><a href="youji.html" title="">游记</a></li>
+			<li class="moren"><a href="forum.html" title=""><span>论坛</span></a></li>
+			<li><a href="equipment.html">装备</a></li>
+			<li><a href="lianxi.html" target="_blank">介绍</a></li>
+		</ul>
+	</div>
+<!-- 导航结束 -->
+<!-- 主体部分开始 -->
+<div class="forum">
+	<div class="f-top">
+		<div class="ft-top">
+		<img src="image/logomao.png" width="30" height="20">
+			<span>>&nbsp;&nbsp;茂藤篝户外论坛</span>
+		</div>
+		<div class="ft-left">
+			<img id="d1" src="image/10.png" width="400" height="250" alt="" onmouseover="st()" onmouseout="start()">
+
+		<ul>
+			<li id="li10" onmouseover="tingTu(10,this)" onmouseout="dongTu()">1</li>
+			<li id="li11" onmouseover="tingTu(11,this)" onmouseout="dongTu()">2</li>
+			<li id="li12" onmouseover="tingTu(12,this)" onmouseout="dongTu()">3</li>
+			<li id="li13" onmouseover="tingTu(13,this)" onmouseout="dongTu()">4</li>
+			<li id="li14" onmouseover="tingTu(14,this)" onmouseout="dongTu()">5</li>
+		</ul>
+		</div>
+		<div class="ft-right">
+		<div class="tiezi-dh">
+			<ul>
+				<li id="li1" onmouseover="showDiv(1,this)">精华帖</li>
+				<li id="li2" onmouseover="showDiv(2,this)">热门贴</li>
+				<li id="li3" onmouseover="showDiv(3,this)">社区推荐</li>
+				<li id="li4" onmouseover="showDiv(4,this)">俱乐部</li>
+				<li id="li5" onmouseover="showDiv(5,this)">小故事</li>
+			</ul>
+		</div>
+		<div class="teizi" id="div1">
+			<ul>
+				<li><a href="">武功山-明月山-庐山路线自助游</a><span>Liveu0314</span></li>
+				<li><a href="">【柳老师队】2017年4月4号-4月7号徒步活动照片</a><span>喜羊羊</span></li>
+				<li><a href="">野外放牧-牧归</a><span>武大郎</span></li>
+				<li><a href="">孤狼A110井冈山之行体验报告</a><span>孤狼</span></li>
+				<li><a href="">武功山晚上露营注意事项</a><span>奥特曼打怪兽</span></li>
+				<li><a href="">大清圆明园</a><span>来自南方的一只熊</span></li>
+				<li><a href="">轮滑如何优雅的摔跤</a><span>轮滑爱好者</span></li>
+			</ul>
+		</div>
+		<div class="teizi" id="div2">
+			<ul>
+				<li><a href="">朝圣:三清山逆时针穿越</a><span>如来佛祖</span></li>
+				<li><a href="">嵩山两日游</a><span>M48星云奥特之父</span></li>
+				<li><a href="">#生态涨姿势#看谁认得植物多</a><span>我来自地球</span></li>
+				<li><a href="">井冈山大学湖心亭之冬泳</a><span>湖光山色</span></li>
+				<li><a href="">风版快成“户外安全专家”</a><span>叫我叫兽</span></li>
+				<li><a href="">【风言风语】之谁是谁的谁</a><span>你是谁</span></li>
+				<li><a href="">#绝命海拔上的救援#</a><span>玫瑰花的刺</span></li>
+			</ul>
+		</div>
+		<div class="teizi" id="div3">
+			<ul>
+				<li><a href="">绿野公告|请注意户外的社区通知</a></li>
+				<li><a href="">官方科普|你知道怎么样在手机上光论坛吗</a><</li>
+				<li><a href="">茂藤篝装备营|2017第6期我要不一样的装备</a></li>
+				<li><a href="">茂藤篝公告|所有的户外爱好者出行请注意天气状况</a></li>
+				<li><a href="">风版快成“户外安全专家”</a></li>
+				<li><a href="">大山深处的徒步-用脚步丈量生命的意义</a></li>
+				<li><a href="">茂藤篝活动通知|你的孤独虽败犹荣，坚持就是挑战自己</a></li>
+			</ul>
+		</div>
+		<div class="teizi" id="div4">
+			<ul>
+				<li><a href="">茂藤篝俱乐部深圳分部</a><span>地址：深圳南山区</span></li>
+				<li><a href="">绿野户外爱好俱乐部</a><span>地址：上海陆家嘴</span></li>
+				<li><a href="">茂藤篝俱乐部总部</a><span>地址：吉安市井冈山大学</span></li>
+				<li><a href="">骑行爱好者俱乐部</a><span>地址：天涯海角</span></li>
+				<li><a href="">牛牛轮滑俱乐部</a><span>地址：吉安步行街</span></li>
+				<li><a href="">旅行爱好者俱乐部</a><span>地址：宜春宜阳新区</span></li>
+				<li><a href="">如果爱请深爱俱乐部</a><span>地址：吉安学苑路28号</span></li>
+			</ul>
+		</div>
+		<div class="teizi" id="div5">
+			一个农民从洪水中救起了他的妻子，他的孩子却被淹死了。事后，人们议论纷纷。有的说他做得对，因为孩子可以再生一个，妻子却不能死而复活；有的说他做错了，因为妻子可以另娶一个，孩子却不能死而复活。我听了人们的议论，也感到疑惑难决：如果只能救活一人，究竟应该救妻子呢，还是救孩子？　　
+ 
+于是我去拜访那个农民，问他当时是怎么想的。他答道：“我什么也没想。洪水袭来，妻子在我身过，我抓住她就往附近的山坡游。当我返回时，孩子已经被洪水冲走了”。　
+　
+归途上，我琢磨着农民的话，对自己说：所谓人生的抉择不少便是如此。　
+ 
+
+		</div>
+	</div>
+	</div>
+
+	<div class="f-main">
+		<div class="fm-top">
+			<span>茂藤篝户外知识</span>
+		</div>
+		<div class="fm-main">
+			
+			<span>从大年初二驴友阳台山失踪，说说学习野外生存是多么重要</span><br/>
+			<a href="">安全知识</a><i>2017-5-25</i>
+				<p>&nbsp;&nbsp;大年初二，一名驴友从北京阳台山公园登山后，便消失在人们的实现中。大年初四，搜救队接到任务后展开搜救，初五，搜救队在萝芭地附近发现一名男子倒地，经检查确认这名男子已经失去生命特征，此人就是大年初二在阳台山失踪的男子。<br/>
+				<br/>
+
+        &nbsp;&nbsp;如果多些野外生存的知识，最大限度地等到救援队的到来。<br/><br/>
+
+        &nbsp;&nbsp;野外生存，其实另外一个非常重要的点就是，你要发挥你的想象力，利用身边所有一切你能够利用的点，只要他能够帮助到你就去做这个事，所以有句英文，我经常说的叫做Survival is not decent，野外生存并不体面，但你还是得照做。<br/><br/>
+        &nbsp;&nbsp;第50期睿的会客厅，是2016年春节之前最后一期，我们请到的嘉宾是中国最年轻的野外生存专家朱炜强。我们之前也做了宣传，有几位回帖说，中国出了那么多驴友事故，都是野外生存闹的，拿把刀哪都敢去。<br/><br/>
+
+        &nbsp;&nbsp;实际上，野外生存不是这样的，野外生存最重要的一点就是之前要做好准备，方方面面的准备，准备的目的是尽量地让行程顺利。而学会更多的野外生存技能，则是一旦有事故发生，则最大的限度地保护自己，利用经验利用工具，最长时间等到救援。<br/><br/>
+        &nbsp;&nbsp;1.如果在野外，你看到果子的话，黑色的、蓝色的百分之九十可食，红色的、绿色的是百分之五十可食。你知道这样的一个方程式之后，我相信很大程度上，就能减少吃错食物的一个几率。<br/><br/>
+        &nbsp;&nbsp;2、我个人从来都不赞成任何说走就走的旅行，我认为旅行一定是有准备的，特别是你去冒险、去探险，其实我每次出去，我想要挑战自己，我自己身后都会背有一个包，我的包里面一定是装满了所有我需要的物资。<br/><br/>
+        &nbsp;&nbsp;3、我要提醒大家的一点就是，野外可能看起来很干净的水，它并不是非常安全的。我们最简单的做法是，最底层是纱布，你也可以用棉布来代替，然后上面是木炭，木炭能够非常好的杀菌，再上面是一层细沙，细沙上面是粗砂，粗砂上面就是用一些杂草，也就是用层层过滤的方式，并且通过木炭这样的一个消毒杀菌力气来解决问题，同时一定要记住，无论任何情况，即使这些过滤完的水，都需要再重新煮开才能用。<br/><br/>
+        &nbsp;&nbsp;4、车子如果一旦进水的话，首先要看的就是它的进水程度。如果说你已经全部都浸入水中，那当时的压力其实已经平衡，理论上来说的话，车窗应该是能够推得开的。但是如果说沉到一半，并且里面有压力的情况下的话，那车门是根本就推不开的。比如拔起车的椅子后面那个靠垫，把它拔出来之后，用一个比较尖的地方去刺穿玻璃。<br/><br/>
+        <!-- <img src="image/chongzi.png">
+        <img src="image/chezi.png"> -->
+			</p>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主体部分结束 -->
+
+<div class="clear"></div>
+<!-- end开始 -->
+	<div class="foot">
+	<span>来自M48星球的奥特曼提醒你：你的孤独虽败犹荣</span>
+	<ul><li><a href="#"> 关于本站 |</a></li>
+	<li><a href="#"> 版权信息 |</a></li>
+	<li><a href="#"> 合作伙伴 |</a></li>
+	<li><a href="#"> 联系我们 |</a></li>
+	<li><a href="#"> 网站地图</a></li>
+	</ul></div>
+	<!-- end结束 -->
+	<!-- 友情链接 -->
+	<div class="friend">
+		<span>友情链接：</span>
+		<ul>
+              <li><a href="http://www.baidu.com">百度一下</a></li>
+              <li><a href="http://www.itcast.cn">传智播客</a></li>
+              <li><a href="http://www.itheima.com">黑马程序员</a></li>
+              <li><a href="http://www.loldytt.com">LOL电影天堂</a></li>
+              <li><a href="http://study.163.com">网易云课堂</a></li>
+              <li><a href="http://www.webhek.com">WEB骇客</a></li>
+              <li><a href="https://jq22.com">JQ插件库</a></li>
+              <li><a href="http://www.imooc.com">慕课网</a></li>
+              <li><a href="https://www.pexels.com">高清壁纸</a></li>
+              <li><a href="https://hao.360.cn">360导航</a></li>
+              <li><a href="https://www.jd.com/">京东商城</a></li>
+              <li><a href="http://www.zol.com.cn/">中关村在线</a></li>
+              <li><a href="http://www.163.com/">网易新闻</a></li>
+              <li><a href="http://www.iqiyi.com/">爱奇艺视频</a></li>
+              <li><a href="http://v.qq.com/">腾讯视频</a></li>
+              <li><a href="http://www.youku.com/">优酷视频</a></li>
+          </ul>
+	</div>
+	<!-- end footer -->
+	<div class="footer">
+    <p>本站内容来自互联网，如果侵犯了你的权益，请与我们联系   邮箱地址：liveu93424@126.com</p>
+	</div>
+
+
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(window).scroll(function(){
+		var _top = $(window).scrollTop();
+		if(_top > 200){
+			$(".nav").addClass("navfd");
+		}
+		else{
+			$(".nav").removeClass("navfd");
+		}
+	});
+</script>
+
+
+</html>

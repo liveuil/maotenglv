@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>茂藤篝</title>
+	<link rel="stylesheet" href="css/cssReset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/produce-l.css">
+	<script type="text/javascript" src="js/time.js"></script>
+	<script type="text/javascript">
+	//页面加载完成之后让图片动起来
+	window.onload=init;
+	var i = 1;
+	var dsq;
+	function init(){
+		var obj = document.getElementById("li1");
+		obj.style.borderBottom = "3px solid #F73131";
+		dsq=window.setInterval("tp()",3000);
+	}
+	//让图片自动切换的函数
+	function tp(){
+		i++;
+		if(i>5){
+			i=1;
+		}
+		var obj = document.getElementById("d1");
+		obj.src = "image/"+i+".jpg";
+		obj.width = "1348";
+		obj.height = "350";
+		ys();
+		var yss = document.getElementById("li"+i);
+		yss.style.borderBottom = "3px solid #F73131";
+	}
+	function st(){
+		window.clearInterval(dsq);
+	}
+	//鼠标离开图片让图片自动切换
+	function start(){
+		dsq=window.setInterval("tp()",3000);
+	}
+	function tingTu(n,m){
+		i=n;
+		var obj = document.getElementById("d1");
+		ys();
+		obj.src = "image/"+n+".jpg";
+		obj.width = "1348";
+		obj.height = "350";
+		window.clearInterval(dsq);
+		m.style.borderBottom = "3px solid #F73131";
+	}
+	//鼠标离开Li标签自动切换
+	function dongTu(){
+		dsq=window.setInterval("tp()",3000);
+	}
+	//清楚所有标签的背景颜色
+	function ys(){
+		for(var j = 1;j<=5;j++){
+			var Allobj = document.getElementById("li"+j);
+			Allobj.style.borderBottom = "3px solid #F1EEEE";
+
+		}
+	}
+	</script>
+</head>
+<body>
+<!-- 页面的顶部 -->
+	<div class="top">
+		<div class="top-page">
+			<div class="top-page-l">您好，欢迎来到茂藤篝!
+			<span class="login"><a href="login.html">登录</a> | <a href="index.html">注册</a>
+			</div>
+			<div class="top-page-r">
+				今天是：
+				<span id="time"></span>
+				<script language="javascript"> showtime();</script>
+			</div>
+		</div>
+	</div>
+
+<!-- logo开始 -->
+	<div class="logo">
+		<a href="index.html" title=""><h1 class="logo-l">茂藤篝</h1></a> <!--网站logo语义化的角度换成a标签增加权重-->
+		<div class="logo-r">
+			<div class="logo-r-content">
+				<input type="input" class="logo-r-searche" value="请输入关键字" onfocus="this.value=''" onblur="if(this.value==''){this.value='请输入关键字'}">
+				<input type="button" value="搜索" class="logo-r-btn">
+			</div>
+		</div>
+		<div class="logo-rr">
+			<span>茂藤篝&nbsp;&nbsp;&nbsp;</span>
+			<span class="logo-rrz">没有最好,只有更好</span>
+		</div>
+	</div>
+<!-- logo结束 -->
+
+<!-- 导航开始 -->
+
+	<div class="nav">
+		<ul>
+			<li class="moren"><a href="index.html" title=""><span>首页</span></a></li>
+			<li ><a href="project.html"  title="">活动</a></li>
+			<li><a href="youji.html" title="">游记</a></li>
+			<li><a href="forum.html" title="">论坛</a></li>
+			<li><a href="equipment.html">装备</a></li>
+			<li><a href="lianxi.html" target="_blank">介绍</a></li>
+		</ul>
+	</div>
+<!-- 导航结束 -->
+
+<!--  轮播图开始-->
+<div class="lb">
+	<div class="lunbo">
+		<img id="d1" src="image/1.jpg" width="1346" height="350" alt="" onmouseover="st()" onmouseout="start()">
+
+		<ul>
+			<li id="li1" onmouseover="tingTu(1,this)" onmouseout="dongTu()">没有最好,只有更好 <span>&nbsp;&nbsp;|</span></li>
+			<li id="li2" onmouseover="tingTu(2,this)" onmouseout="dongTu()">没有最好,只有更好 <span>&nbsp;&nbsp;|</span></li>
+			<li id="li3" onmouseover="tingTu(3,this)" onmouseout="dongTu()">没有最好,只有更好 <span>&nbsp;&nbsp;|</span></li>
+			<li id="li4" onmouseover="tingTu(4,this)" onmouseout="dongTu()">没有最好,只有更好 <span>&nbsp;&nbsp;|</span></li>
+			<li id="li5" onmouseover="tingTu(5,this)" onmouseout="dongTu()">没有最好,只有更好 <span>&nbsp;&nbsp;|</span></li>
+		</ul>
+	</div>
+</div>
+
+<!--  轮播图结束-->
+
+
+
+
+<!-- 主体部分开始 -->
+<div class="main">
+	<div class="m-top">
+		<h2>
+		<a href="#">更多>></a>
+		<span>精品活动</span>
+		</h2>
+		<div class="huodong">
+			<div class="hd-left">
+				<div class="imag">
+					<img src="image/11.jpg" width="280px" height="160px">
+					<span><a href="jgshan.html" target="_blank">【端午精选】井冈山大学一日游<br/>
+					观井大红色文化，赏井大书香之韵。</a>
+					</span>
+				</div>
+				<div class="imag">
+					<img src="image/12.jpg" width="280px" height="160px">
+					<span><a href="lshan.html" target="_blank">【端午精选】庐山两日游<br/>
+					不识庐山真面目,只缘身在此山中。
+					</a></span>
+				</div>
+				<div class="imag">
+					<img src="image/13.jpg" width="280px" height="160px">
+					<span><a href="wgshan.html" target="_blank">【端午精选】武功山露营<br/>
+					武功山发云界 千山碧透铺云锦。
+					</a></span>
+				</div>
+				<div class="imag">
+					<img src="image/14.jpg" width="280px" height="160px">
+					<span><a href="wtxiang.html" target="_blank">【端午精选】感受文天祥情怀<br/>
+					知己肝胆相照。痛定思痛,痛何扣哉。
+					</a></span>
+				</div>
+				<div class="imag">
+					<img src="image/15.jpg" width="280px" height="160px">
+					<span><a href="lling.html" target="_blank">【端午精选】庐陵别样精神<br/>
+					其表现是优美典雅，其精神是刚正义烈。
+					</a></span>
+				</div>
+				<div class="imag">
+					<img src="image/16.jpg" width="280px" height="160px">
+					<span><a href="hhou.html" target="_blank">【端午精选】古后河长廊<br/>
+					细品古后河绿廊，古韵悠悠！悦读古后河绿廊，满目滴翠！
+					</a></span>
+				</div>
+			</div>
+			<div class="hd-right">
+				<div class="imag-r">
+					<span>【闲游户外】端午节<br/>宜春明月山-天沐温泉-武功山-井冈山大学-特色路线三日游。</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="m-bottom">
+		<h2>
+		<a href="#">更多>></a>
+		<span>户外美图</span>
+		</h2>
+		<div class="meitu wrap">
+			<div class='poster-main carousel' data-setting='{
+	         "width":1200,
+             "height":250,
+             "posterWidth":380,
+             "posterHeight":250,
+             "verticalAlign":"bottom",
+             "autoPlay":true,
+             "speed":1500,
+             "delay":3000,
+             "scale":1.0
+	}'>
+	<div class='poster-btn poster-prev-btn'></div>
+	<ul class='poster-list'>
+		<li class="list-item"><a href="#"><img src="./image/01.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/02.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/03.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/04.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/05.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/06.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/07.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/08.jpg" alt=""></a></li>
+		<li class="list-item"><a href="#"><img src="./image/09.jpg" alt=""></a></li>
+	</ul>
+		<div class='poster-btn poster-next-btn'></div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- 主体部分结束 -->
+
+
+
+<!-- <div class="clear"></div> -->
+<!-- end开始 -->
+	<div class="foot">
+	<span>来自M48星球的奥特曼提醒你：你的孤独虽败犹荣</span>
+	<ul><li><a href="#"> 关于本站 |</a></li>
+	<li><a href="#"> 版权信息 |</a></li>
+	<li><a href="#"> 合作伙伴 |</a></li>
+	<li><a href="#"> 联系我们 |</a></li>
+	<li><a href="#"> 网站地图</a></li>
+	</ul></div>
+	<!-- end结束 -->
+	<!-- 友情链接 -->
+	<div class="friend">
+		<span>友情链接：</span>
+		<ul>
+              <li><a href="http://www.baidu.com">百度一下</a></li>
+              <li><a href="http://www.itcast.cn">传智播客</a></li>
+              <li><a href="http://www.itheima.com">黑马程序员</a></li>
+              <li><a href="http://www.loldytt.com">LOL电影天堂</a></li>
+              <li><a href="http://study.163.com">网易云课堂</a></li>
+              <li><a href="http://www.webhek.com">WEB骇客</a></li>
+              <li><a href="https://jq22.com">JQ插件库</a></li>
+              <li><a href="http://www.imooc.com">慕课网</a></li>
+              <li><a href="https://www.pexels.com">高清壁纸</a></li>
+              <li><a href="https://hao.360.cn">360导航</a></li>
+              <li><a href="https://www.jd.com/">京东商城</a></li>
+              <li><a href="http://www.zol.com.cn/">中关村在线</a></li>
+              <li><a href="http://www.163.com/">网易新闻</a></li>
+              <li><a href="http://www.iqiyi.com/">爱奇艺视频</a></li>
+              <li><a href="http://v.qq.com/">腾讯视频</a></li>
+              <li><a href="http://www.youku.com/">优酷视频</a></li>
+          </ul>
+	</div>
+	<!-- end footer -->
+	<div class="footer">
+    <p>本站内容来自互联网，如果侵犯了你的权益，请与我们联系   邮箱地址：93424@163.com</p>
+	</div>
+
+
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(window).scroll(function(){
+		var _top = $(window).scrollTop();
+		if(_top > 200){
+			$(".nav").addClass("navfd");
+		}
+		else{
+			$(".nav").removeClass("navfd");
+		}
+	});
+</script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+        Carousel.init($('.carousel'));
+	})
+</script>
+</html>

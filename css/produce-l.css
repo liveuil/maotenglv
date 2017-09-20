@@ -1,0 +1,40 @@
+.image {
+	width: 250px;
+	height: 300px;
+	margin: 5px 0 0 5px;
+	float: left;
+}
+.article {
+	width: 420px;
+	height: 300px;
+	float: right;
+	margin: 5px 5px 0 5px;
+}
+.article span {
+	display: inline-block;
+	font-family: '楷体' '宋体';
+	font-size: 22px;
+	color: black;
+	text-align: center;
+	padding: 10px 0 0 120px;
+	color: #E46E6E;
+}
+.arsa {
+	display: inline-block;
+	color: red;
+}
+.ars {
+	font-family: '楷体' '宋体';
+	font-size: 18px;
+	color: black;
+	text-indent: 20px;
+	padding-top: 3px;
+}
+.clear {
+	clear: both;
+}
+.eassy {
+	width: 680px;
+	height: 128px;
+	margin: 5px 0 0 5px;
+}

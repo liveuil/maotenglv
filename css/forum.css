@@ -1,0 +1,410 @@
+.top {
+	width: 1346px;
+	height: 36px;
+	background-color: rgba(254,181,127,0.1);
+	overflow: hidden;
+}
+.top-page {
+	width: 1100px;
+	height: 36px;
+	margin: 0 auto;
+	color: #000;
+	overflow: hidden;
+}
+.top-page-l {
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.top-page-r {
+	float: right;
+	height: 24px;
+	line-height: 36px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.top-page-r span {
+	color: #E12D2D;
+	font-family: '楷体' '宋体';
+}
+.login {
+	color: black;
+	padding-left: 20px;
+}
+
+/*logo开始*/
+.logo {
+	width: 1346px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo-l {
+	width: 200px;
+	height: 100px;
+	margin-left: 80px;
+	background: url('../image/logo.png');
+	text-indent: -1000em;
+	float: left;
+}
+.logo-r {
+	width: 400px;
+	height: 40px;
+	margin:0 auto;
+	margin-top: 40px;
+	padding-right: 320px;
+	float: right;
+}
+.logo-r-content {
+	width: 350px;
+	height: 32px;
+	border: 1px solid #C9C9C9;
+}
+.logo-r-searche {
+	width: 280px;
+	height: 32px;
+	color: #999999;
+	font-family: '华文楷体';
+	font-size: 16px;
+	float: left;
+}
+.logo-r-btn {
+	width: 70px;
+	height: 32px;
+	background-color: #DE2933;
+	color: white;
+	font-size: 20px;
+	font-family: '华文楷体';
+	float: left;
+}
+.logo-rr{
+	width:116px;
+	height: 40px;
+	float: left;
+	position: absolute;
+	top: 20px;
+	right: 140px;
+}
+.logo-rr span{
+	width:116px;
+	height: 40px;
+	display: block;
+	position: relative;
+	top: 10px;
+	right: -40px;
+	font-family: '华文楷体';
+	text-align: center;
+	font-size: 22px;
+
+}
+.logo-rr .logo-rrz{
+	position: relative;
+	top: 10px;
+	right: -40px;
+	font-family: '华文楷体';
+	font-size: 14px;
+	color: #B5A8A8;
+
+}
+
+/*nav开始*/
+.nav {
+	width: 1346px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom: 1px solid #969595;
+	background-color: #FE4100;
+}
+.nav ul{
+	padding-left: 120px;
+}
+.nav li {
+	float: left;
+	padding: 0 36px 0 36px;
+	line-height: 40px;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: '华文楷体';
+
+}
+
+.moren {
+	background-color: rgba(189,16,103,0.5);
+}
+.moren span {
+	color: white;
+}
+.nav li a {
+	color: #F1F3F5;
+}
+.nav li:hover {
+	background-color: rgba(189,16,103,0.5);
+}
+.nav li:hover a {
+	color: #BEB8B8;
+}
+.navfd{
+	position: fixed;
+	top: 0px;
+	width: 1346px;
+	margin: 0;
+	padding-left:180px;
+	opacity: 0.9;
+	z-index: 100;
+
+}
+
+/*主体部分*/
+.forum{
+	width: 1346px;
+	margin:0 auto;
+}
+.forum .f-top{
+	width: 1000px;
+	height: 300px;
+	margin:0 auto;
+	margin-top:60px;
+	position: relative;
+}
+.forum .f-top .ft-top{
+	width: 930px;
+	height:1px;
+	border-top: 1px solid #FE5E4C;
+	margin-top: 20px;
+}
+.forum .f-top .ft-top img{
+	position: relative;
+	top:-30px;
+}
+.forum .f-top .ft-top span{
+	color: #FE4100;
+	font-weight: bold;
+	font-size: 18px;
+	position: relative;
+	top:-30px;
+}
+.forum .f-top .ft-left{
+	width: 400px;
+	height: 250px;
+	border:1px solid gray;
+	margin-top:6px;
+	float: left;
+}
+.forum .f-top .ft-left ul{
+	position: absolute;
+		top: 10px;
+		left: 2px;
+}
+.forum .f-top .ft-left ul li{
+		list-style: none;
+		width: 25px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		background-color: #B4B2B2;
+		opacity: 0.6;
+		float: left;
+		margin-left: 2px;
+
+}
+.forum .f-top .ft-right{
+	width: 500px;
+	height: 250px;
+	border:1px solid #B3B2B2;
+	margin-top: 6px;
+	margin-right: 70px;
+	float: right;
+}
+.forum .f-top .ft-right .tiezi-dh ul li{
+	list-style: none;
+	float: left;
+	width: 98px;
+	border:1px solid #B3B2B2;
+	background: #EFEDED;
+	height: 30px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+}
+.forum .f-top .ft-right	.tiezi-dh ul{
+	height: 30px;
+	margin-bottom: 18px;
+}
+.forum .f-top .ft-right .teizi{
+	width: 476px;
+	height: 300px;
+	padding-left: 10px;
+}
+.forum .f-top .ft-right .teizi ul li{
+	padding-top: 5px;
+}
+.forum .f-top .ft-right .teizi ul li a{
+	color: #2A2929;
+	font-size: 16px;
+	/*font-family: '华文楷体';*/
+}
+.forum .f-top .ft-right .teizi ul li:hover a{
+	color:#FE2A2A;
+}
+.forum .f-top .ft-right .teizi ul li span{
+	float: right;
+	color: #8A8888;
+	font-size: 14px;
+}
+
+#div2,#div3,#div4,#div5{
+	display: none;
+}
+
+
+
+.forum .f-main{
+	width: 1000px;
+	height: 900px;
+	margin:0 auto;
+	border:1px solid #D7D7D7;
+	margin-bottom: 50px;
+}
+.forum .f-main .fm-top{
+	width: 1000px;
+	height: 35px;
+	background-color: #FE4100;
+}
+.forum .f-main .fm-top span{
+	color: #FFFAF8;
+	height: 35px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: '华文楷体';
+	line-height: 35px;
+	padding-left: 30px;
+}
+.forum .f-main .fm-main{
+	width: 980px;
+	height: 866px;
+	margin:0 auto;
+	border:1px solid #DAD8D8;
+	border-top: none;
+	/*margin-top: 20px;*/
+}
+.forum .f-main .fm-main p{
+	font-size: 20px;
+	font-family: '宋体';
+	color: #444242;
+	position: relative;
+	top: 50px;
+}
+.forum .f-main .fm-main span{
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	color: #0D0D0D;
+	font-family: '宋体';
+	padding: 30px 0 0 18px;
+	position: relative;
+	left: 130px;
+}
+.forum .f-main .fm-main a{
+	width: 90px;
+	height: 20px;
+	display: inline-block;
+	background-color: #FE4100;
+	font-size: 20px;
+	font-family: '华文楷体';
+	text-align: center;
+	line-height: 20px;
+	color: white;
+	position: relative;
+	top: 10px;
+	left: 340px;
+}
+.forum .f-main .fm-main i{
+	color: #A9A3A3;
+	position: relative;
+	top: 10px;
+	left: 360px;
+}
+/*.forum .f-main .fm-main p img{
+	float: left;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*底部开始*/
+.foot {
+	width: 1346px;
+	height: 25px;
+	border-bottom: 3px solid #958F8F;
+	margin: 0 auto;
+	font-family: "宋体";
+	font-size: 10px;
+}
+.foot span{
+	float: right;
+	padding-right: 50px;
+	font-size: 16px;
+}
+.foot ul{
+	padding-left: 50px;
+}
+.foot ul li a {
+	float: left;
+	padding-left: 20px;
+	color: black;
+}
+.friend {
+	width: 1346px;
+	height:100px;
+	margin: 0 auto;
+	padding-top: 12px;
+	font-size: 12px;
+	font-family: '宋体';
+}
+.friend span {
+	color: #868282;
+	display: inline-block;
+	padding-left: 40px;
+
+}
+.friend li a {
+	color: #868282;
+	padding-left: 40px;
+}
+.friend li {
+	float: left;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+.friend li a:hover {
+	color: red;
+}
+
+.footer {
+	width: 1346px;
+	height: 50px;
+	margin:0 auto;
+	line-height: 50px;
+	background-color: #B3B3B3;
+}
+.footer p {
+	text-align: center;
+	font-family: "宋体" "楷体";
+	font-size: 10px;
+}

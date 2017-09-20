@@ -1,0 +1,281 @@
+.top {
+	width: 1346px;
+	height: 36px;
+	margin:0 auto;
+	background-color: rgba(254,181,127,0.1);
+	overflow: hidden;
+}
+.top-page {
+	width: 1100px;
+	height: 36px;
+	margin: 0 auto;
+	color: #000;
+	overflow: hidden;
+}
+.top-page-l {
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.top-page-r {
+	float: right;
+	height: 24px;
+	line-height: 36px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.top-page-r span {
+	color: #E12D2D;
+	font-family: '楷体' '宋体';
+}
+.login {
+	color: black;
+	padding-left: 20px;
+}
+
+/*logo开始*/
+.logo {
+	width: 1346px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo #img{
+	position: absolute;
+	top: 0;
+	left: 82px;
+}
+.logo-l {
+	width: 200px;
+	height: 100px;
+	margin-left: 80px;
+	background: url('../image/logo.png');
+	text-indent: -1000em;
+	float: left;
+}
+.logo-r {
+	width: 400px;
+	height: 40px;
+	margin-top: 40px;
+	margin-right: 320px;
+	float: right;
+}
+.logo-r-content {
+	width: 350px;
+	height: 32px;
+	border: 1px solid #C9C9C9;
+}
+.logo-r-searche {
+	width: 280px;
+	height: 32px;
+	color: #999999;
+	font-family: '华文楷体';
+	font-size: 16px;
+	float: left;
+}
+.logo-r-btn {
+	width: 70px;
+	height: 32px;
+	background-color: #DE2933;
+	color: white;
+	font-size: 20px;
+	font-family: '华文楷体';
+	float: left;
+}
+.logo-rr{
+	width:116px;
+	height: 40px;
+	float: left;
+	position: absolute;
+	top: 20px;
+	right: 140px;
+}
+.logo-rr span{
+	width:116px;
+	height: 40px;
+	display: block;
+	position: relative;
+	top: 10px;
+	right: -40px;
+	font-family: '华文楷体';
+	text-align: center;
+	font-size: 22px;
+
+}
+.logo-rr .logo-rrz{
+	position: relative;
+	top: 10px;
+	right: -40px;
+	font-family: '华文楷体';
+	font-size: 14px;
+	color: #B5A8A8;
+
+}
+
+/*nav开始*/
+.nav {
+	width: 1349px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom: 1px solid #969595;
+	background-color: #FE4100;
+}
+.nav ul{
+	padding-left: 120px;
+}
+.nav li {
+	float: left;
+	padding: 0 36px 0 36px;
+	line-height: 40px;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: '华文楷体';
+
+}
+
+.moren {
+	background-color: rgba(189,16,103,0.5);
+}
+.moren span {
+	color: white;
+}
+.nav li a {
+	color: #F1F3F5;
+}
+.nav li:hover {
+	background-color: rgba(189,16,103,0.5);
+}
+.nav li:hover a {
+	color: #BEB8B8;
+}
+.navfd{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left:180px;
+	opacity: 0.8;
+	z-index: 100;
+
+}
+
+
+/*主体开始*/
+.xianxi{
+	width: 1040px;
+	height: 640px;
+	margin:0 auto;
+}
+.xianxi .xx-top{
+	width: 1020px;
+	height: 40px;
+	margin:0 auto;
+	margin-top: 30px;
+	border-bottom: 3px solid #FC2626;
+	margin-bottom: 20px;
+	/*box-shadow: 0 0 10px #FC3C3C;*/
+}
+.xianxi .xx-top span{
+	color: #FE4646;
+	font-size: 24px;
+	padding-left: 10px;
+}
+.xianxi .xx-middle{
+	width: 1000px;
+	height: 440px;
+	margin:0 auto;
+	margin-top: 30px;
+	border:1px solid #D1D1D1;
+	box-shadow: 0 0 66px #7A7979;
+	border-radius: 220px;
+	padding-left: 20px;
+	padding-top: 20px;
+	position: relative;
+	padding-left: 100px;
+}
+.xianxi .xx-middle span{
+	color: #383737;
+	font-size: 22px;
+	font-family: '华文楷体';
+	font-weight: bold;
+
+}
+.xianxi .xx-middle img{
+	position: absolute;
+	top: 30px;
+	right: 400px;
+}
+
+
+
+/*主体部分结束*/
+
+
+/*.clear {
+    clear: both;
+    width: 0px;
+    height: 0px;
+}*/
+.foot {
+	width: 1346px;
+	height: 25px;
+	border-bottom: 3px solid #958F8F;
+	padding-top: 50px;
+	margin: 0 auto;
+	font-family: "宋体";
+	font-size: 10px;
+}
+.foot span {
+	float: right;
+	padding-right: 50px;
+}
+.foot ul{
+	padding-left: 50px;
+}
+.foot ul li a {
+	float: left;
+	padding-left: 20px;
+	color: black;
+}
+.friend {
+	width: 1346px;
+	height:100px;
+	margin: 0 auto;
+	padding-top: 12px;
+	font-size: 12px;
+	font-family: '宋体';
+}
+.friend span {
+	color: #868282;
+	display: inline-block;
+	padding-left: 40px;
+
+}
+.friend li a {
+	color: #868282;
+	padding-left: 40px;
+}
+.friend li {
+	float: left;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+.friend li a:hover {
+	color: red;
+}
+
+.footer {
+	width: 1346px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #B3B3B3;
+}
+.footer p {
+	text-align: center;
+	font-family: "宋体" "楷体";
+	font-size: 10px;
+}
